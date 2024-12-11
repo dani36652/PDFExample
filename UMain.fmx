@@ -1,0 +1,146 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 519
+  ClientWidth = 386
+  Fill.Kind = Solid
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object rectToolBar: TRectangle
+    Align = Top
+    Fill.Color = claSteelblue
+    Size.Width = 386.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    object lblTituloToolBar: TLabel
+      Align = Client
+      StyledSettings = [Family, Size]
+      Margins.Left = 15.000000000000000000
+      Size.Width = 371.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 18.000000000000000000
+      TextSettings.Font.StyleExt = {00060000000000000004000000}
+      TextSettings.FontColor = claWhite
+      Text = 'PDFExample'
+      TabOrder = 0
+    end
+  end
+  object CmbBxPDFs: TComboBox
+    Align = Bottom
+    ItemIndex = 0
+    Margins.Left = 15.000000000000000000
+    Margins.Right = 15.000000000000000000
+    Margins.Bottom = 10.000000000000000000
+    Position.X = 15.000000000000000000
+    Position.Y = 414.000000000000000000
+    Size.Width = 356.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    OnChange = CmbBxPDFsChange
+    object ListBoxItem1: TListBoxItem
+      IsSelected = True
+      Size.Width = 44.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Asesinato'
+    end
+    object ListBoxItem2: TListBoxItem
+      TabOrder = 1
+      Text = 'Caballer'#237'a roja'
+    end
+    object ListBoxItem3: TListBoxItem
+      TabOrder = 2
+      Text = 'Coraz'#243'n'
+    end
+  end
+  object NavegacionPDF: TGridPanelLayout
+    Align = Bottom
+    Margins.Bottom = 15.000000000000000000
+    Position.Y = 456.000000000000000000
+    Size.Width = 386.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    ColumnCollection = <
+      item
+        Value = 50.000000000000000000
+      end
+      item
+        Value = 50.000000000000000000
+      end>
+    ControlCollection = <
+      item
+        Column = 0
+        Control = btnAnterior
+        Row = 0
+      end
+      item
+        Column = 1
+        Control = btnSiguiente
+        Row = 0
+      end>
+    RowCollection = <
+      item
+        Value = 100.000000000000000000
+      end>
+    object btnAnterior: TButton
+      Align = Client
+      Enabled = False
+      StyledSettings = [Family, FontColor]
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 183.000000000000000000
+      Size.Height = 38.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Anterior'
+      TextSettings.Font.Size = 16.000000000000000000
+      TextSettings.Font.StyleExt = {00060000000000000004000000}
+      TextSettings.Trimming = None
+      TintColor = claSteelblue
+      OnClick = btnAnteriorClick
+    end
+    object btnSiguiente: TButton
+      Align = Client
+      Enabled = False
+      StyledSettings = [Family]
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 183.000000000000000000
+      Size.Height = 38.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Siguiente'
+      TextSettings.Font.Size = 16.000000000000000000
+      TextSettings.Font.StyleExt = {00060000000000000004000000}
+      TextSettings.Trimming = None
+      TintColor = claSteelblue
+      OnClick = btnSiguienteClick
+    end
+  end
+  object imgPDF: TImage
+    MultiResBitmap = <
+      item
+      end>
+    Align = Client
+    Margins.Left = 15.000000000000000000
+    Margins.Top = 15.000000000000000000
+    Margins.Right = 15.000000000000000000
+    Margins.Bottom = 15.000000000000000000
+    Size.Width = 356.000000000000000000
+    Size.Height = 336.000000000000000000
+    Size.PlatformDefault = False
+  end
+end

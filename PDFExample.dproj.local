@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/12/10 13:11:58.000.109,=C:\Users\drodriguez\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/12/10 13:39:04.000.402,C:\Users\drodriguez\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\drodriguez\Documents\Embarcadero\Studio\Projects\PDFRender.dproj</Transaction>
+    <Transaction>2024/12/10 13:39:22.000.890,C:\Users\drodriguez\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\drodriguez\Documents\Embarcadero\Studio\Projects\UMain.pas</Transaction>
+    <Transaction>2024/12/10 13:39:22.000.890,C:\Users\drodriguez\Documents\Embarcadero\Studio\Projects\Unit1.fmx=C:\Users\drodriguez\Documents\Embarcadero\Studio\Projects\UMain.fmx</Transaction>
+    <Transaction>2024/12/10 13:39:28.000.829,C:\Users\drodriguez\Documents\Embarcadero\Studio\Projects\UMain.fmx=C:\Users\drodriguez\Desktop\RenderizarPDF\UMain.fmx</Transaction>
+    <Transaction>2024/12/10 13:39:28.000.829,C:\Users\drodriguez\Documents\Embarcadero\Studio\Projects\UMain.pas=C:\Users\drodriguez\Desktop\RenderizarPDF\UMain.pas</Transaction>
+    <Transaction>2024/12/10 13:39:30.000.487,C:\Users\drodriguez\Documents\Embarcadero\Studio\Projects\PDFRender.dproj=C:\Users\drodriguez\Desktop\RenderizarPDF\PDFRender.dproj</Transaction>
+    <Transaction>2024/12/10 14:03:36.000.653,=C:\Users\drodriguez\Desktop\RenderizarPDF\Res\pdf\Asesinato.pdf</Transaction>
+    <Transaction>2024/12/10 14:03:36.000.713,=C:\Users\drodriguez\Desktop\RenderizarPDF\Res\pdf\Caballeria.pdf</Transaction>
+    <Transaction>2024/12/10 14:03:36.000.793,=C:\Users\drodriguez\Desktop\RenderizarPDF\Res\pdf\Corazon.pdf</Transaction>
+    <Transaction>2024/12/11 12:22:35.000.617,C:\Users\drodriguez\Desktop\RenderizarPDF\PDFRender.dproj=C:\Users\drodriguez\Desktop\RenderizarPDF\PDFExample.dproj</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile Android64="MR7PSGG6NZLNEU7T"/>
+	</ActiveMobileDevice>
+</BorlandProject>
