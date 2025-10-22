@@ -157,14 +157,9 @@ begin
     btnAnterior.Enabled := Index > 0;
     btnSiguiente.Enabled := Index < FRenderer.getPageCount - 1;
   finally
-    if FCurrentPage <> nil then
-      FCurrentPage.close;
-
-    if FRenderer <> nil then
-      FRenderer.close;
-
-    if FFileDescriptor <> nil then
-      FFileDescriptor.close;
+    FCurrentPage.close;
+    FRenderer.close;
+    FFileDescriptor.close;
   end;
 end;
 

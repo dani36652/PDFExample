@@ -42,7 +42,7 @@ object frmMain: TfrmMain
     Size.Width = 356.000000000000000000
     Size.Height = 32.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 3
+    TabOrder = 4
     OnChange = CmbBxPDFsChange
     object ListBoxItem1: TListBoxItem
       IsSelected = True

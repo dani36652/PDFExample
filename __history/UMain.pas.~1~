@@ -119,7 +119,7 @@ begin
   JavaFile := TJFile.JavaClass.init(StringToJString(FilePath));
 
   FFileDescriptor := TJParcelFileDescriptor.JavaClass.open(JavaFile,
-  TJParcelFileDescriptor.JavaClass.MODE_READ_ONLY);
+    TJParcelFileDescriptor.JavaClass.MODE_READ_ONLY);
 
   FRenderer := TJPdfRenderer.JavaClass.init(FFileDescriptor);
 end;
@@ -130,42 +130,35 @@ var
   DelphiBitmap: TBitmap;
   ScaleFactor: Integer;
 begin
-  try
-    // Abrir la nueva página
-    FCurrentPage := FRenderer.openPage(Index);
+  // Cerrar la página actual si está abierta
+  if FCurrentPage <> nil then
+    FCurrentPage.close;
 
-    ScaleFactor:= 3; //Un factor de escala para aumentar la resolución de la imagen
+  // Abrir la nueva página
+  FCurrentPage := FRenderer.openPage(Index);
 
-    // Crear un bitmap para renderizar la página
-    Bitmap := TJBitmap.JavaClass.createBitmap(FCurrentPage.getWidth * ScaleFactor,
+  ScaleFactor:= 3; //Un factor de escala para aumentar la resolución de la imagen
+
+  // Crear un bitmap para renderizar la página
+  Bitmap := TJBitmap.JavaClass.createBitmap(FCurrentPage.getWidth * ScaleFactor,
     FCurrentPage.getHeight * ScaleFactor, TJBitmap_Config.JavaClass.ARGB_8888);
 
-    FCurrentPage.render(Bitmap, nil, nil, TJPdfRenderer_Page.JavaClass.RENDER_MODE_FOR_DISPLAY);
+  FCurrentPage.render(Bitmap, nil, nil, TJPdfRenderer_Page.JavaClass.RENDER_MODE_FOR_DISPLAY);
 
-    // Convertir el bitmap de Android a un bitmap de Delphi
-    DelphiBitmap := TBitmap.Create;
-    try
-      if not JBitmapToBitmap(Bitmap, DelphiBitmap) then
-        Exit;
-      imgPDF.Bitmap.Assign(DelphiBitmap);
-    finally
-      DelphiBitmap.Free;
-      Bitmap.recycle;
-    end;
-
-    // Habilitar/deshabilitar botones
-    btnAnterior.Enabled := Index > 0;
-    btnSiguiente.Enabled := Index < FRenderer.getPageCount - 1;
+  // Convertir el bitmap de Android a un bitmap de Delphi
+  DelphiBitmap := TBitmap.Create;
+  try
+    if not JBitmapToBitmap(Bitmap, DelphiBitmap) then
+      Exit;
+    imgPDF.Bitmap.Assign(DelphiBitmap);
   finally
-    if FCurrentPage <> nil then
-      FCurrentPage.close;
-
-    if FRenderer <> nil then
-      FRenderer.close;
-
-    if FFileDescriptor <> nil then
-      FFileDescriptor.close;
+    DelphiBitmap.Free;
+    Bitmap.recycle;
   end;
+
+  // Habilitar/deshabilitar botones
+  btnAnterior.Enabled := Index > 0;
+  btnSiguiente.Enabled := Index < FRenderer.getPageCount - 1;
 end;
 
 end.
